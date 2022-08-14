@@ -1,40 +1,150 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>What Is React?</h2>
+					<p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces.
+						It lets you compose complex UIs from small and isolated pieces of code called “components”.</p>
+					<img data-src="./img/react-logo.png" alt="" srcset="">
+			</section>
+			<section>
+				<h3>Components and Props</h3>
+				<p>
+					Components let you split the UI into independent, reusable pieces, and think about each piece in
+					isolation.
+				</p>
+				<p>
+					Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called
+					“props”) and return React elements describing what should appear on the screen.
+				</p>
+			</section>
+			<section>
+				<h3>Function and Class Components</h3>
+				<h4>Function Component:</h4>
+				<pre><code><script type="text/template">
+						function Welcome(props) {
+							return <h1>Hello, {props.name}</h1>;
+						}
+					</script></code></pre>
+				<h4>Class Component:</h4>
+				<pre><code><script type="text/template">
+						class Welcome extends React.Component {
+							render() {
+							  return <h1>Hello, {this.props.name}</h1>;
+							}
+						}
+					</script></code></pre>
+			</section>
+			<section>
+				<h3>Rendering a Component</h3>
+				<pre><code><script type="text/template">
+						function Welcome(props) {
+							return <h1>Привет, {props.name}</h1>;
+						}
+						  
+						const root = ReactDOM.createRoot(document.getElementById('root'));
+						const element = <Welcome name="Алиса" />;
+						root.render(element);
+					</script></code></pre>
+			</section>
+			<section>
+				<h3>What is JSX?</h3>
+				<p>JSX is an extension of the JavaScript syntax.</p>
+				<p>JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+				<pre><code><script type="text/template">
+						const name = 'Josh Perez';
+						const element = <h1>Hello, {name}</h1>;
+					</script></code></pre>
+			</section>
+			<section>
+				<h3>JSX is an Expression Too</h3>
+				<p>
+					After compilation, JSX expressions become regular JavaScript function calls and evaluate to
+					JavaScript objects.
+				</p>
+				<p>
+					This means that you can use JSX inside of if statements and for loops, assign it to variables,
+					accept it as arguments, and return it from functions:
+				</p>
+				<pre><code><script type="text/template">
+						function getGreeting(user) {
+							if (user) {
+							  return <h1>Hello, {formatName(user)}!</h1>;
+							}
+							return <h1>Hello, Stranger.</h1>;
+						}
+					</script></code></pre>
+			</section>
+			<section>
+				<h3>JSX tags may contain children:</h3>
+				<pre><code><script type="text/template">
+						const element = (
+						  <div>
+							<h1>Hello!</h1>
+							<h2>Good to see you here.</h2>
+						  </div>
+						);
+					</script></code></pre>
+			</section>
+			<section>
+				<h3>The Component Lifecycle</h3>
+				<p>Each component has several “lifecycle methods” that you can override to run code at particular times
+					in the process. </p>
+
+			</section>
+			<section>
+				<dl>
+					<dt>Component Lifecycle Methods:</dt>
+					<dd>
+						<li>Mounting</li>
+					</dd>
+					<dd>
+						<li>Updating</li>
+					</dd>
+					<dd>
+						<li>Unmounting</li>
+					</dd>
+					<dd>
+						<li>Error Handling</li>
+					</dd>
+				</dl>
+				<img src="./img/methods.jpg" alt="" srcset="">
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
