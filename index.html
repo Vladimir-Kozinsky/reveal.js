@@ -27,18 +27,18 @@
 			<section>
 				<h3>Components and Props</h3>
 				<p>
-					Components let you split the UI into independent, reusable pieces, and think about each piece in
-					isolation.
-				</p>
-				<p>
 					Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called
 					“props”) and return React elements describing what should appear on the screen.
+				</p>
+				<p>
+					Components let you split the UI into independent, reusable pieces, and think about each piece in
+					isolation.
 				</p>
 			</section>
 			<section>
 				<h3>Function and Class Components</h3>
 				<h4>Function Component:</h4>
-				<pre><code><script type="text/template">
+				<pre><code><script type="text/template">		
 						function Welcome(props) {
 							return <h1>Hello, {props.name}</h1>;
 						}
@@ -55,13 +55,13 @@
 			<section>
 				<h3>Rendering a Component</h3>
 				<pre><code><script type="text/template">
-						function Welcome(props) {
-							return <h1>Привет, {props.name}</h1>;
-						}
-						  
-						const root = ReactDOM.createRoot(document.getElementById('root'));
-						const element = <Welcome name="Алиса" />;
-						root.render(element);
+					function Welcome(props) {
+						return <h1>Hello, {props.name}</h1>;
+					}
+					  
+					const root = ReactDOM.createRoot(document.getElementById('root'));
+					const element = <Welcome name="Sara" />;
+					root.render(element);
 					</script></code></pre>
 			</section>
 			<section>
@@ -96,10 +96,10 @@
 				<h3>JSX tags may contain children:</h3>
 				<pre><code><script type="text/template">
 						const element = (
-						  <div>
-							<h1>Hello!</h1>
-							<h2>Good to see you here.</h2>
-						  </div>
+							<div>
+									<h1>Hello!</h1>
+									<h2>Good to see you here.</h2>
+							</div>
 						);
 					</script></code></pre>
 			</section>
@@ -126,6 +126,9 @@
 					</dd>
 				</dl>
 				<img src="./img/methods.jpg" alt="" srcset="">
+			</section>
+			<section>
+				<h3>The end.</h3>
 			</section>
 		</div>
 	</div>
